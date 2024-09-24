@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\formlar\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:formlar\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\formlar\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:formlar\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAnasayfa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Formlar\\frmAnasayfa.cs",
+              "RelativeDocumentMoniker": "Formlar\\frmAnasayfa.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Formlar\\frmAnasayfa.cs [Design]",
+              "RelativeToolTip": "Formlar\\frmAnasayfa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:36:27.094Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAnasayfa.cs",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Formlar\\frmAnasayfa.cs",
+              "RelativeDocumentMoniker": "Formlar\\frmAnasayfa.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Formlar\\frmAnasayfa.cs",
+              "RelativeToolTip": "Formlar\\frmAnasayfa.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T13:30:47.389Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
