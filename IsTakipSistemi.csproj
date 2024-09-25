@@ -118,11 +118,17 @@
     <Compile Include="Formlar\frmAnasayfa.Designer.cs">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\frmDepartmanlar.cs">
+    <Compile Include="Formlar\frmDepartmanEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\frmDepartmanlar.Designer.cs">
-      <DependentUpon>frmDepartmanlar.cs</DependentUpon>
+    <Compile Include="Formlar\frmDepartmanEkle.Designer.cs">
+      <DependentUpon>frmDepartmanEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmDepartmanListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmDepartmanListesi.Designer.cs">
+      <DependentUpon>frmDepartmanListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmGorevDetay.cs">
       <SubType>Form</SubType>
@@ -142,11 +148,17 @@
     <Compile Include="Formlar\frmGorevListesi.Designer.cs">
       <DependentUpon>frmGorevListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\frmPersoneller.cs">
+    <Compile Include="Formlar\frmPersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\frmPersoneller.Designer.cs">
-      <DependentUpon>frmPersoneller.cs</DependentUpon>
+    <Compile Include="Formlar\frmPersonelEkle.Designer.cs">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmPersonelListesi.Designer.cs">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmPersonelIstatistikleri.cs">
       <SubType>Form</SubType>
@@ -162,8 +174,11 @@
     <EmbeddedResource Include="Formlar\frmAnasayfa.resx">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\frmDepartmanlar.resx">
-      <DependentUpon>frmDepartmanlar.cs</DependentUpon>
+    <EmbeddedResource Include="Formlar\frmDepartmanEkle.resx">
+      <DependentUpon>frmDepartmanEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmDepartmanListesi.resx">
+      <DependentUpon>frmDepartmanListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmGorevDetay.resx">
       <DependentUpon>frmGorevDetay.cs</DependentUpon>
@@ -174,8 +189,11 @@
     <EmbeddedResource Include="Formlar\frmGorevListesi.resx">
       <DependentUpon>frmGorevListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\frmPersoneller.resx">
-      <DependentUpon>frmPersoneller.cs</DependentUpon>
+    <EmbeddedResource Include="Formlar\frmPersonelEkle.resx">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmPersonelListesi.resx">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmPersonelIstatistikleri.resx">
       <DependentUpon>frmPersonelIstatistikleri.cs</DependentUpon>

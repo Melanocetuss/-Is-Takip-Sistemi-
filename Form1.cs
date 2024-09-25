@@ -13,13 +13,15 @@ namespace IsTakipSistemi
 {
     public partial class IsTakipUygulamasi : Form
     {
-        private Formlar.frmDepartmanlar frmDep;
-        private Formlar.frmPersoneller frmPer;
+        private Formlar.frmDepartmanListesi frmDep;
+        private Formlar.frmDepartmanEkle frmDepEkle;
+        private Formlar.frmPersonelListesi frmPer;
         private Formlar.frmGorevListesi frmGorL;
         private Formlar.frmGorevEkle frmGorevEkle;
         private Formlar.frmPersonelIstatistikleri frmPerI;
         private Formlar.frmGorevDetay frmGorevDetay;
         private Formlar.frmAnasayfa frmAnasayfa;
+        private Formlar.frmPersonelEkle frmPerEkle;
         public IsTakipUygulamasi()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace IsTakipSistemi
         {
             if(frmDep == null || frmDep.IsDisposed)
             {
-                frmDep = new Formlar.frmDepartmanlar();
+                frmDep = new Formlar.frmDepartmanListesi();
                 frmDep.MdiParent = this;
                 frmDep.Show();
             }            
@@ -39,7 +41,7 @@ namespace IsTakipSistemi
         {
             if(frmPer == null || frmPer.IsDisposed)
             {
-                frmPer = new Formlar.frmPersoneller();
+                frmPer = new Formlar.frmPersonelListesi();
                 frmPer.MdiParent = this;
                 frmPer.Show();
             }
@@ -61,6 +63,7 @@ namespace IsTakipSistemi
            if(frmGorevDetay == null || frmGorevDetay.IsDisposed)
             {
                 frmGorevDetay = new Formlar.frmGorevDetay();
+                frmGorevDetay.MdiParent= this;
                 frmGorevDetay.Show();
             }
                        
@@ -92,6 +95,24 @@ namespace IsTakipSistemi
                 frmAnasayfa = new frmAnasayfa();
                 frmAnasayfa.MdiParent = this;
                 frmAnasayfa.Show();
+            }
+        }
+
+        private void btnYeniDepartmanEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmDepEkle == null || frmDepEkle.IsDisposed)
+            {
+                frmDepEkle = new frmDepartmanEkle();              
+                frmDepEkle.Show();
+            }
+        }
+
+        private void btnYeniPersonelEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmPerEkle == null || frmPerEkle.IsDisposed)
+            {
+                frmPerEkle = new frmPersonelEkle();
+                frmPerEkle.Show();
             }
         }
     }

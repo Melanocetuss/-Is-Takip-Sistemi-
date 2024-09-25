@@ -1,6 +1,6 @@
 ﻿namespace IsTakipSistemi.Formlar
 {
-    partial class frmDepartmanlar
+    partial class frmDepartmanEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -28,72 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepartmanlar));
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepartmanEkle));
             this.grpCDep = new DevExpress.XtraEditors.GroupControl();
-            this.btnDepGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnDepSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDepEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDepListele = new DevExpress.XtraEditors.SimpleButton();
             this.txtDepAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtDepID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpCDep)).BeginInit();
             this.grpCDep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(0, -2);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1168, 615);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
             // grpCDep
             // 
-            this.grpCDep.Controls.Add(this.btnDepGuncelle);
+            this.grpCDep.Controls.Add(this.btnKapat);
             this.grpCDep.Controls.Add(this.btnDepSil);
             this.grpCDep.Controls.Add(this.btnDepEkle);
-            this.grpCDep.Controls.Add(this.btnDepListele);
             this.grpCDep.Controls.Add(this.txtDepAdi);
             this.grpCDep.Controls.Add(this.labelControl2);
             this.grpCDep.Controls.Add(this.txtDepID);
             this.grpCDep.Controls.Add(this.labelControl1);
-            this.grpCDep.Location = new System.Drawing.Point(1174, -2);
+            this.grpCDep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpCDep.Location = new System.Drawing.Point(0, 0);
             this.grpCDep.Name = "grpCDep";
-            this.grpCDep.Size = new System.Drawing.Size(383, 615);
-            this.grpCDep.TabIndex = 1;
+            this.grpCDep.Size = new System.Drawing.Size(369, 297);
+            this.grpCDep.TabIndex = 2;
             // 
-            // btnDepGuncelle
+            // btnKapat
             // 
-            this.btnDepGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDepGuncelle.ImageOptions.Image")));
-            this.btnDepGuncelle.Location = new System.Drawing.Point(130, 217);
-            this.btnDepGuncelle.Name = "btnDepGuncelle";
-            this.btnDepGuncelle.Size = new System.Drawing.Size(183, 35);
-            this.btnDepGuncelle.TabIndex = 7;
-            this.btnDepGuncelle.Text = "Güncelle";
-            this.btnDepGuncelle.Click += new System.EventHandler(this.btnDepGuncelle_Click);
+            this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(130, 176);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(183, 35);
+            this.btnKapat.TabIndex = 7;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnDepSil
             // 
             this.btnDepSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDepSil.ImageOptions.Image")));
-            this.btnDepSil.Location = new System.Drawing.Point(130, 176);
+            this.btnDepSil.Location = new System.Drawing.Point(130, 135);
             this.btnDepSil.Name = "btnDepSil";
             this.btnDepSil.Size = new System.Drawing.Size(183, 35);
             this.btnDepSil.TabIndex = 6;
@@ -103,22 +81,12 @@
             // btnDepEkle
             // 
             this.btnDepEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDepEkle.ImageOptions.Image")));
-            this.btnDepEkle.Location = new System.Drawing.Point(130, 135);
+            this.btnDepEkle.Location = new System.Drawing.Point(130, 94);
             this.btnDepEkle.Name = "btnDepEkle";
             this.btnDepEkle.Size = new System.Drawing.Size(183, 35);
             this.btnDepEkle.TabIndex = 5;
             this.btnDepEkle.Text = "Ekle";
             this.btnDepEkle.Click += new System.EventHandler(this.btnDepEkle_Click);
-            // 
-            // btnDepListele
-            // 
-            this.btnDepListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDepListele.ImageOptions.Image")));
-            this.btnDepListele.Location = new System.Drawing.Point(130, 94);
-            this.btnDepListele.Name = "btnDepListele";
-            this.btnDepListele.Size = new System.Drawing.Size(183, 35);
-            this.btnDepListele.TabIndex = 4;
-            this.btnDepListele.Text = "Listele";
-            this.btnDepListele.Click += new System.EventHandler(this.btnDepListele_Click);
             // 
             // txtDepAdi
             // 
@@ -150,18 +118,15 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Departmanlar ID:";
             // 
-            // frmDepartmanlar
+            // frmDepartmanEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1520, 606);
+            this.ClientSize = new System.Drawing.Size(369, 297);
             this.Controls.Add(this.grpCDep);
-            this.Controls.Add(this.gridControl1);
-            this.Name = "frmDepartmanlar";
-            this.Text = "Departman Listesi";
-            this.Load += new System.EventHandler(this.frmDepartmanlar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.Name = "frmDepartmanEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmDepartmanEkle";
             ((System.ComponentModel.ISupportInitialize)(this.grpCDep)).EndInit();
             this.grpCDep.ResumeLayout(false);
             this.grpCDep.PerformLayout();
@@ -173,16 +138,13 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl grpCDep;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnDepGuncelle;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnDepSil;
         private DevExpress.XtraEditors.SimpleButton btnDepEkle;
-        private DevExpress.XtraEditors.SimpleButton btnDepListele;
         private DevExpress.XtraEditors.TextEdit txtDepAdi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtDepID;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

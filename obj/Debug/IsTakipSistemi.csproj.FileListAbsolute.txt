@@ -89,8 +89,6 @@ C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\bin\Debug\DevExpres
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\bin\Debug\DevExpress.Office.v24.1.Core.xml
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.csproj.AssemblyReference.cache
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.IsTakipUygulamasi.resources
-C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmDepartmanlar.resources
-C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersoneller.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Properties.Resources.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.csproj.GenerateResource.cache
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.exe.licenses
@@ -126,3 +124,7 @@ C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSi
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmGorevDetay.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersonelIstatistikleri.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmAnasayfa.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmDepartmanEkle.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmDepartmanListesi.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersonelListesi.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersonelEkle.resources
