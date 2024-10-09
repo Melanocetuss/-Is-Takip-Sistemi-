@@ -18,6 +18,8 @@ namespace IsTakipSistemi.Entity
         public tbl_Firmalar()
         {
             this.tbl_Cagri = new HashSet<tbl_Cagri>();
+            this.tbl_Mesajlar = new HashSet<tbl_Mesajlar>();
+            this.tbl_Mesajlar1 = new HashSet<tbl_Mesajlar>();
         }
     
         public int ID_FIRMA { get; set; }
@@ -29,8 +31,14 @@ namespace IsTakipSistemi.Entity
         public string FIRMA_IL { get; set; }
         public string FIRMA_ILCE { get; set; }
         public string FIRMA_ADRES { get; set; }
+        public string FIRMA_SIFRE { get; set; }
+        public string GORSEL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Cagri> tbl_Cagri { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_Mesajlar> tbl_Mesajlar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_Mesajlar> tbl_Mesajlar1 { get; set; }
     }
 }

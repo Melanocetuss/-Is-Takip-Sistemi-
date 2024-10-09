@@ -19,6 +19,7 @@ namespace IsTakipSistemi.Entity
         {
             this.tbl_Gorevler = new HashSet<tbl_Gorevler>();
             this.tbl_Gorevler1 = new HashSet<tbl_Gorevler>();
+            this.tbl_Cagri = new HashSet<tbl_Cagri>();
         }
     
         public int ID_PERSONAl { get; set; }
@@ -29,11 +30,15 @@ namespace IsTakipSistemi.Entity
         public string PERSONEL_GORSEL { get; set; }
         public Nullable<int> DEPARTMAN { get; set; }
         public Nullable<bool> DURUM { get; set; }
+        public string ROL { get; set; }
+        public string SIFRE { get; set; }
     
         public virtual tbl_Departmanlar tbl_Departmanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Gorevler> tbl_Gorevler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Gorevler> tbl_Gorevler1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_Cagri> tbl_Cagri { get; set; }
     }
 }

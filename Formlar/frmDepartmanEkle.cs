@@ -14,7 +14,7 @@ namespace IsTakipSistemi.Formlar
 {
     public partial class frmDepartmanEkle : Form
     {        
-        private Entity.DbisTakipEntities db = new DbisTakipEntities();
+        private Entity.DbisTakipEntities1 db = new DbisTakipEntities1();
         public frmDepartmanEkle()
         {
             InitializeComponent();

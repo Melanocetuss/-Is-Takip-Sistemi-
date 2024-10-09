@@ -19,7 +19,7 @@ namespace IsTakipSistemi.Formlar
             InitializeComponent();
         }
 
-        private Entity.DbisTakipEntities db = new DbisTakipEntities();
+        private Entity.DbisTakipEntities1 db = new DbisTakipEntities1();
 
         private void frmGorevEkle_Load(object sender, EventArgs e)
         {
@@ -47,7 +47,7 @@ namespace IsTakipSistemi.Formlar
         {
             tbl_Gorevler t = new tbl_Gorevler();
 
-            t.GOREV_VEREN = int.Parse(txtGorevVeren.Text);
+            t.GOREV_VEREN = 1;
             t.GOREV_ALAN = int.Parse(cbxGorevAlan.EditValue.ToString());
             t.GOREV_TARIH = DateTime.Parse(txtTarih.Text);
             t.GOREV_ACIKLAMA = txtAciklama.Text;

@@ -91,6 +91,9 @@
     <Compile Include="Entity\tbl_Cagri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\tbl_CagriDetay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\tbl_Departmanlar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -103,6 +106,9 @@
     <Compile Include="Entity\tbl_Gorevler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\tbl_Mesajlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\tbl_Personeler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -112,11 +118,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmAktifCagrilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmAktifCagrilar.Designer.cs">
+      <DependentUpon>frmAktifCagrilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\frmAnasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\frmAnasayfa.Designer.cs">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmCagriAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmCagriAtama.Designer.cs">
+      <DependentUpon>frmCagriAtama.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmDepartmanEkle.cs">
       <SubType>Form</SubType>
@@ -148,6 +166,12 @@
     <Compile Include="Formlar\frmGorevListesi.Designer.cs">
       <DependentUpon>frmGorevListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmPasifCagrilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmPasifCagrilar.Designer.cs">
+      <DependentUpon>frmPasifCagrilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\frmPersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,13 +190,55 @@
     <Compile Include="Formlar\frmPersonelIstatistikleri.Designer.cs">
       <DependentUpon>frmPersonelIstatistikleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullaniciFormlari\frmAktifGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmAktifGorevler.Designer.cs">
+      <DependentUpon>frmAktifGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmCagriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmCagriDetay.Designer.cs">
+      <DependentUpon>frmCagriDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmCagriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmCagriListesi.Designer.cs">
+      <DependentUpon>frmCagriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmPasifGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciFormlari\frmPasifGorevler.Designer.cs">
+      <DependentUpon>frmPasifGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmAktifCagrilar.resx">
+      <DependentUpon>frmAktifCagrilar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmAnasayfa.resx">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmCagriAtama.resx">
+      <DependentUpon>frmCagriAtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmDepartmanEkle.resx">
       <DependentUpon>frmDepartmanEkle.cs</DependentUpon>
@@ -189,6 +255,9 @@
     <EmbeddedResource Include="Formlar\frmGorevListesi.resx">
       <DependentUpon>frmGorevListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmPasifCagrilar.resx">
+      <DependentUpon>frmPasifCagrilar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmPersonelEkle.resx">
       <DependentUpon>frmPersonelEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +266,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmPersonelIstatistikleri.resx">
       <DependentUpon>frmPersonelIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciFormlari\frmAktifGorevler.resx">
+      <DependentUpon>frmAktifGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciFormlari\frmCagriDetay.resx">
+      <DependentUpon>frmCagriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciFormlari\frmCagriListesi.resx">
+      <DependentUpon>frmCagriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciFormlari\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciFormlari\frmPasifGorevler.resx">
+      <DependentUpon>frmPasifGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -229,12 +316,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Entity\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

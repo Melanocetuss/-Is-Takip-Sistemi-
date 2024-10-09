@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IsTakipSistemi.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace IsTakipSistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IsTakipUygulamasi());
+            Application.Run(new frmLogin());   
         }
     }
 }

@@ -22,6 +22,8 @@ namespace IsTakipSistemi
         private Formlar.frmGorevDetay frmGorevDetay;
         private Formlar.frmAnasayfa frmAnasayfa;
         private Formlar.frmPersonelEkle frmPerEkle;
+        private Formlar.frmAktifCagrilar frmAktifCagrilar;
+        private Formlar.frmPasifCagrilar frmPasifCagrilar;
         public IsTakipUygulamasi()
         {
             InitializeComponent();
@@ -113,6 +115,26 @@ namespace IsTakipSistemi
             {
                 frmPerEkle = new frmPersonelEkle();
                 frmPerEkle.Show();
+            }
+        }
+
+        private void btnAktifCagrilar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(frmAktifCagrilar == null || frmAktifCagrilar.IsDisposed) 
+            {
+                frmAktifCagrilar = new frmAktifCagrilar();
+                frmAktifCagrilar.MdiParent = this;
+                frmAktifCagrilar.Show();
+            }
+        }
+
+        private void btnPasifCagrilar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmPasifCagrilar == null || frmPasifCagrilar.IsDisposed)
+            {
+                frmPasifCagrilar = new frmPasifCagrilar();
+                frmPasifCagrilar.MdiParent = this;
+                frmPasifCagrilar.Show();
             }
         }
     }

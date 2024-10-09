@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\kullaniciformlari\\frmaktifgorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:kullaniciformlari\\frmaktifgorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\kullaniciformlari\\frmaktifgorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:kullaniciformlari\\frmaktifgorevler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\kullaniciformlari\\frmcagridetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:kullaniciformlari\\frmcagridetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|c:\\users\\alpha\\onedrive\\masa\u00FCst\u00FC\\project\\c#\\istakipsistemi\\kullaniciformlari\\frmcagridetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EA2FD6E-BE1A-481F-85A2-E57F94EE717A}|IsTakipSistemi.csproj|solutionrelative:kullaniciformlari\\frmcagridetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAktifGorevler.cs",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmAktifGorevler.cs",
+              "RelativeDocumentMoniker": "KullaniciFormlari\\frmAktifGorevler.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmAktifGorevler.cs",
+              "RelativeToolTip": "KullaniciFormlari\\frmAktifGorevler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:54:38.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmAktifGorevler.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmAktifGorevler.cs",
+              "RelativeDocumentMoniker": "KullaniciFormlari\\frmAktifGorevler.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmAktifGorevler.cs [Design]",
+              "RelativeToolTip": "KullaniciFormlari\\frmAktifGorevler.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:54:36.484Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:54:12.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Login\\frmLogin.cs",
+              "RelativeToolTip": "Login\\frmLogin.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAewEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:53:34.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Login\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Login\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:53:31.214Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:53:21.245Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmCagriDetay.cs",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmCagriDetay.cs",
+              "RelativeDocumentMoniker": "KullaniciFormlari\\frmCagriDetay.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmCagriDetay.cs",
+              "RelativeToolTip": "KullaniciFormlari\\frmCagriDetay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:50:33.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmCagriDetay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmCagriDetay.cs",
+              "RelativeDocumentMoniker": "KullaniciFormlari\\frmCagriDetay.cs",
+              "ToolTip": "C:\\Users\\alpha\\OneDrive\\Masa\u00FCst\u00FC\\Project\\C#\\IsTakipSistemi\\KullaniciFormlari\\frmCagriDetay.cs [Design]",
+              "RelativeToolTip": "KullaniciFormlari\\frmCagriDetay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:50:26.094Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

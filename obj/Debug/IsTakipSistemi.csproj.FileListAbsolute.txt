@@ -128,3 +128,12 @@ C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSi
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmDepartmanListesi.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersonelListesi.resources
 C:\Users\alpha\OneDrive\Masaüstü\Project\C#\isTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPersonelEkle.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmAktifCagrilar.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmPasifCagrilar.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Kullanici_Formlari.frmAktifGorevler.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Kullanici_Formlari.frmMain.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.KullaniciFormlari.frmPasifGorevler.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Login.frmLogin.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.KullaniciFormlari.frmCagriListesi.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.KullaniciFormlari.frmCagriDetay.resources
+C:\Users\alpha\OneDrive\Masaüstü\Project\C#\IsTakipSistemi\obj\Debug\IsTakipSistemi.Formlar.frmCagriAtama.resources

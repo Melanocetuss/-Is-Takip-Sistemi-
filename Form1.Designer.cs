@@ -56,6 +56,8 @@
             this.btnSifreIslemleri = new DevExpress.XtraBars.BarButtonItem();
             this.btnYetkilendirmeler = new DevExpress.XtraBars.BarButtonItem();
             this.btnGenelIstatistikler = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAktifCagrilar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPasifCagrilar = new DevExpress.XtraBars.BarButtonItem();
             this.rbnAnaSayfa = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbnDepartmanlar = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,6 +79,8 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbnYetkilendirme = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.rbnControlisTakipUyg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -84,6 +88,7 @@
             // 
             // rbnControlisTakipUyg
             // 
+            this.rbnControlisTakipUyg.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(37);
             this.rbnControlisTakipUyg.ExpandCollapseItem.Id = 0;
             this.rbnControlisTakipUyg.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.rbnControlisTakipUyg.ExpandCollapseItem,
@@ -111,15 +116,20 @@
             this.btnHaritalar,
             this.btnSifreIslemleri,
             this.btnYetkilendirmeler,
-            this.btnGenelIstatistikler});
+            this.btnGenelIstatistikler,
+            this.btnAktifCagrilar,
+            this.btnPasifCagrilar});
             this.rbnControlisTakipUyg.Location = new System.Drawing.Point(0, 0);
-            this.rbnControlisTakipUyg.MaxItemId = 26;
+            this.rbnControlisTakipUyg.Margin = new System.Windows.Forms.Padding(4);
+            this.rbnControlisTakipUyg.MaxItemId = 28;
             this.rbnControlisTakipUyg.Name = "rbnControlisTakipUyg";
+            this.rbnControlisTakipUyg.OptionsMenuMinWidth = 412;
             this.rbnControlisTakipUyg.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbnAnaSayfa,
             this.rbnDepartmanlar,
             this.rbnPersoneller,
             this.btnFirmalar,
+            this.ribbonPage1,
             this.rbnGorevler,
             this.rbnRaporlar,
             this.rbnAraclar,
@@ -310,6 +320,22 @@
             this.btnGenelIstatistikler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGenelIstatistikler.ImageOptions.LargeImage")));
             this.btnGenelIstatistikler.Name = "btnGenelIstatistikler";
             // 
+            // btnAktifCagrilar
+            // 
+            this.btnAktifCagrilar.Caption = "Aktif Çağrılar";
+            this.btnAktifCagrilar.Id = 26;
+            this.btnAktifCagrilar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAktifCagrilar.ImageOptions.LargeImage")));
+            this.btnAktifCagrilar.Name = "btnAktifCagrilar";
+            this.btnAktifCagrilar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAktifCagrilar_ItemClick);
+            // 
+            // btnPasifCagrilar
+            // 
+            this.btnPasifCagrilar.Caption = "Pasif Çağrılar";
+            this.btnPasifCagrilar.Id = 27;
+            this.btnPasifCagrilar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPasifCagrilar.ImageOptions.LargeImage")));
+            this.btnPasifCagrilar.Name = "btnPasifCagrilar";
+            this.btnPasifCagrilar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPasifCagrilar_ItemClick);
+            // 
             // rbnAnaSayfa
             // 
             this.rbnAnaSayfa.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -455,6 +481,20 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.btnYetkilendirmeler);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14});
+            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Çağrılar";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnAktifCagrilar);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnPasifCagrilar);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -467,6 +507,7 @@
             this.Controls.Add(this.rbnControlisTakipUyg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(1538, 653);
             this.Name = "IsTakipUygulamasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "İş Takip Uygulaması";
@@ -527,6 +568,10 @@
         private DevExpress.XtraBars.BarButtonItem btnYetkilendirmeler;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btnGenelIstatistikler;
+        private DevExpress.XtraBars.BarButtonItem btnAktifCagrilar;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem btnPasifCagrilar;
     }
 }
 

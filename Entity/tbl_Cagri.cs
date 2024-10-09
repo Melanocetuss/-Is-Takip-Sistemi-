@@ -14,13 +14,23 @@ namespace IsTakipSistemi.Entity
     
     public partial class tbl_Cagri
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tbl_Cagri()
+        {
+            this.tbl_CagriDetay = new HashSet<tbl_CagriDetay>();
+        }
+    
         public int ID_CAGRI { get; set; }
         public int FIRMA_ID { get; set; }
         public string KONU { get; set; }
         public string ACIKLAMA { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<bool> CAGRI_DURUM { get; set; }
+        public Nullable<int> PERSONEL_ID { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_CagriDetay> tbl_CagriDetay { get; set; }
         public virtual tbl_Firmalar tbl_Firmalar { get; set; }
+        public virtual tbl_Personeler tbl_Personeler { get; set; }
     }
 }

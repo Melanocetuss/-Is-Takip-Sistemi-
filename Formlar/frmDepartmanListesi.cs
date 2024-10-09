@@ -21,7 +21,7 @@ namespace IsTakipSistemi.Formlar
             InitializeComponent();
         }
         
-        private Entity.DbisTakipEntities db = new DbisTakipEntities();
+        private Entity.DbisTakipEntities1 db = new DbisTakipEntities1();
         
         public void departmanListele()
         {

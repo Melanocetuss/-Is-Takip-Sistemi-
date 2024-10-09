@@ -23,6 +23,17 @@
           <Property Name="ACIKLAMA" Type="nvarchar(max)" />
           <Property Name="TARIH" Type="date" />
           <Property Name="CAGRI_DURUM" Type="bit" />
+          <Property Name="PERSONEL_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_CagriDetay">
+          <Key>
+            <PropertyRef Name="ID_CAGRI_DETAY" />
+          </Key>
+          <Property Name="ID_CAGRI_DETAY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CAGRI_ID" Type="int" />
+          <Property Name="ACIKLAMA" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tarih" Type="date" />
+          <Property Name="Saat" Type="char" MaxLength="8" />
         </EntityType>
         <EntityType Name="tbl_Departmanlar">
           <Key>
@@ -44,6 +55,8 @@
           <Property Name="FIRMA_IL" Type="nvarchar" MaxLength="20" />
           <Property Name="FIRMA_ILCE" Type="nvarchar" MaxLength="30" />
           <Property Name="FIRMA_ADRES" Type="nvarchar" MaxLength="200" />
+          <Property Name="FIRMA_SIFRE" Type="nvarchar" MaxLength="20" />
+          <Property Name="GORSEL" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="tbl_GorevDetaylar">
           <Key>
@@ -66,6 +79,18 @@
           <Property Name="GOREV_DURUM" Type="bit" />
           <Property Name="GOREV_TARIH" Type="date" />
         </EntityType>
+        <EntityType Name="tbl_Mesajlar">
+          <Key>
+            <PropertyRef Name="ID_MESAJ" />
+          </Key>
+          <Property Name="ID_MESAJ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GONDEREN" Type="int" Nullable="false" />
+          <Property Name="ALICI" Type="int" Nullable="false" />
+          <Property Name="KONU" Type="nvarchar" MaxLength="50" />
+          <Property Name="MESAJ" Type="nvarchar(max)" />
+          <Property Name="TARIH" Type="date" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
         <EntityType Name="tbl_Personeler">
           <Key>
             <PropertyRef Name="ID_PERSONAl" />
@@ -78,7 +103,33 @@
           <Property Name="PERSONEL_GORSEL" Type="nvarchar" MaxLength="100" />
           <Property Name="DEPARTMAN" Type="int" />
           <Property Name="DURUM" Type="bit" />
+          <Property Name="ROL" Type="char" MaxLength="1" />
+          <Property Name="SIFRE" Type="nvarchar" MaxLength="30" />
         </EntityType>
+        <Association Name="FK__tbl_Cagri__CAGRI__6383C8BA">
+          <End Role="tbl_Cagri" Type="Self.tbl_Cagri" Multiplicity="0..1" />
+          <End Role="tbl_CagriDetay" Type="Self.tbl_CagriDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Cagri">
+              <PropertyRef Name="ID_CAGRI" />
+            </Principal>
+            <Dependent Role="tbl_CagriDetay">
+              <PropertyRef Name="CAGRI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Cagri_tbl_Personeler">
+          <End Role="tbl_Personeler" Type="Self.tbl_Personeler" Multiplicity="0..1" />
+          <End Role="tbl_Cagri" Type="Self.tbl_Cagri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Personeler">
+              <PropertyRef Name="ID_PERSONAl" />
+            </Principal>
+            <Dependent Role="tbl_Cagri">
+              <PropertyRef Name="PERSONEL_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tbl_GorevDetaylar_tbl_Gorevler">
           <End Role="tbl_Gorevler" Type="Self.tbl_Gorevler" Multiplicity="1" />
           <End Role="tbl_GorevDetaylar" Type="Self.tbl_GorevDetaylar" Multiplicity="*" />
@@ -112,6 +163,30 @@
             </Principal>
             <Dependent Role="tbl_Gorevler">
               <PropertyRef Name="GOREV_VEREN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Mesajlar_tbl_Firmalar">
+          <End Role="tbl_Firmalar" Type="Self.tbl_Firmalar" Multiplicity="1" />
+          <End Role="tbl_Mesajlar" Type="Self.tbl_Mesajlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Firmalar">
+              <PropertyRef Name="ID_FIRMA" />
+            </Principal>
+            <Dependent Role="tbl_Mesajlar">
+              <PropertyRef Name="GONDEREN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Mesajlar_tbl_Firmalar1">
+          <End Role="tbl_Firmalar" Type="Self.tbl_Firmalar" Multiplicity="1" />
+          <End Role="tbl_Mesajlar" Type="Self.tbl_Mesajlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Firmalar">
+              <PropertyRef Name="ID_FIRMA" />
+            </Principal>
+            <Dependent Role="tbl_Mesajlar">
+              <PropertyRef Name="ALICI" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -142,11 +217,21 @@
         <EntityContainer Name="DbisTakipModelStoreContainer">
           <EntitySet Name="tbl_ADMIN" EntityType="Self.tbl_ADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Cagri" EntityType="Self.tbl_Cagri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_CagriDetay" EntityType="Self.tbl_CagriDetay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Departmanlar" EntityType="Self.tbl_Departmanlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Firmalar" EntityType="Self.tbl_Firmalar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_GorevDetaylar" EntityType="Self.tbl_GorevDetaylar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Gorevler" EntityType="Self.tbl_Gorevler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Mesajlar" EntityType="Self.tbl_Mesajlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Personeler" EntityType="Self.tbl_Personeler" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tbl_Cagri__CAGRI__6383C8BA" Association="Self.FK__tbl_Cagri__CAGRI__6383C8BA">
+            <End Role="tbl_Cagri" EntitySet="tbl_Cagri" />
+            <End Role="tbl_CagriDetay" EntitySet="tbl_CagriDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Cagri_tbl_Personeler" Association="Self.FK_tbl_Cagri_tbl_Personeler">
+            <End Role="tbl_Personeler" EntitySet="tbl_Personeler" />
+            <End Role="tbl_Cagri" EntitySet="tbl_Cagri" />
+          </AssociationSet>
           <AssociationSet Name="FK_tbl_GorevDetaylar_tbl_Gorevler" Association="Self.FK_tbl_GorevDetaylar_tbl_Gorevler">
             <End Role="tbl_Gorevler" EntitySet="tbl_Gorevler" />
             <End Role="tbl_GorevDetaylar" EntitySet="tbl_GorevDetaylar" />
@@ -158,6 +243,14 @@
           <AssociationSet Name="FK_tbl_Gorevler_tbl_Personeler1" Association="Self.FK_tbl_Gorevler_tbl_Personeler1">
             <End Role="tbl_Personeler" EntitySet="tbl_Personeler" />
             <End Role="tbl_Gorevler" EntitySet="tbl_Gorevler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Mesajlar_tbl_Firmalar" Association="Self.FK_tbl_Mesajlar_tbl_Firmalar">
+            <End Role="tbl_Firmalar" EntitySet="tbl_Firmalar" />
+            <End Role="tbl_Mesajlar" EntitySet="tbl_Mesajlar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Mesajlar_tbl_Firmalar1" Association="Self.FK_tbl_Mesajlar_tbl_Firmalar1">
+            <End Role="tbl_Firmalar" EntitySet="tbl_Firmalar" />
+            <End Role="tbl_Mesajlar" EntitySet="tbl_Mesajlar" />
           </AssociationSet>
           <AssociationSet Name="FK_tbl_Personeler_tbl_Departmanlar" Association="Self.FK_tbl_Personeler_tbl_Departmanlar">
             <End Role="tbl_Departmanlar" EntitySet="tbl_Departmanlar" />
@@ -180,6 +273,32 @@
           <Property Name="KULLANICI_ADI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="SIFRE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="tbl_Cagri">
+          <Key>
+            <PropertyRef Name="ID_CAGRI" />
+          </Key>
+          <Property Name="ID_CAGRI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIRMA_ID" Type="Int32" Nullable="false" />
+          <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="CAGRI_DURUM" Type="Boolean" />
+          <NavigationProperty Name="tbl_CagriDetay" Relationship="Self.FK__tbl_Cagri__CAGRI__6383C8BA" FromRole="tbl_Cagri" ToRole="tbl_CagriDetay" />
+          <NavigationProperty Name="tbl_Firmalar" Relationship="Self.FK_tblCagri_tblFirmalar" FromRole="tbl_Cagri" ToRole="tbl_Firmalar" />
+          <Property Name="PERSONEL_ID" Type="Int32" />
+          <NavigationProperty Name="tbl_Personeler" Relationship="DbisTakipModel.FK_tbl_Cagri_tbl_Personeler" FromRole="tbl_Cagri" ToRole="tbl_Personeler" />
+        </EntityType>
+        <EntityType Name="tbl_CagriDetay">
+          <Key>
+            <PropertyRef Name="ID_CAGRI_DETAY" />
+          </Key>
+          <Property Name="ID_CAGRI_DETAY" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CAGRI_ID" Type="Int32" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+          <Property Name="Saat" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="tbl_Cagri" Relationship="Self.FK__tbl_Cagri__CAGRI__6383C8BA" FromRole="tbl_CagriDetay" ToRole="tbl_Cagri" />
+        </EntityType>
         <EntityType Name="tbl_Departmanlar">
           <Key>
             <PropertyRef Name="ID_DEPARTMAN" />
@@ -201,7 +320,11 @@
           <Property Name="FIRMA_IL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="FIRMA_ILCE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="FIRMA_ADRES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="tbl_Cagri" Relationship="DbisTakipModel.FK_tblCagri_tblFirmalar" FromRole="tbl_Firmalar" ToRole="tbl_Cagri" />
+          <NavigationProperty Name="tbl_Cagri" Relationship="Self.FK_tblCagri_tblFirmalar" FromRole="tbl_Firmalar" ToRole="tbl_Cagri" />
+          <Property Name="FIRMA_SIFRE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_Mesajlar" Relationship="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar" FromRole="tbl_Firmalar" ToRole="tbl_Mesajlar" />
+          <NavigationProperty Name="tbl_Mesajlar1" Relationship="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar1" FromRole="tbl_Firmalar" ToRole="tbl_Mesajlar" />
         </EntityType>
         <EntityType Name="tbl_GorevDetaylar">
           <Key>
@@ -222,7 +345,7 @@
           <Property Name="GOREV_VEREN" Type="Int32" />
           <Property Name="GOREV_ALAN" Type="Int32" />
           <Property Name="GOREV_ACIKLAMA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="GOREV_DURUM" Type="Edm.Boolean" Nullable="true" />
+          <Property Name="GOREV_DURUM" Type="Boolean" />
           <Property Name="GOREV_TARIH" Type="DateTime" Precision="0" />
           <NavigationProperty Name="tbl_GorevDetaylar" Relationship="Self.FK_tbl_GorevDetaylar_tbl_Gorevler" FromRole="tbl_Gorevler" ToRole="tbl_GorevDetaylar" />
           <NavigationProperty Name="tbl_Personeler" Relationship="Self.FK_tbl_Gorevler_tbl_Personeler" FromRole="tbl_Gorevler" ToRole="tbl_Personeler" />
@@ -239,11 +362,38 @@
           <Property Name="PERSONEL_TELEFON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="PERSONEL_GORSEL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DEPARTMAN" Type="Int32" />
+          <Property Name="DURUM" Type="Boolean" />
           <NavigationProperty Name="tbl_Departmanlar" Relationship="Self.FK_tbl_Personeler_tbl_Departmanlar" FromRole="tbl_Personeler" ToRole="tbl_Departmanlar" />
           <NavigationProperty Name="tbl_Gorevler" Relationship="Self.FK_tbl_Gorevler_tbl_Personeler" FromRole="tbl_Personeler" ToRole="tbl_Gorevler" />
           <NavigationProperty Name="tbl_Gorevler1" Relationship="Self.FK_tbl_Gorevler_tbl_Personeler1" FromRole="tbl_Personeler" ToRole="tbl_Gorevler" />
-          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="ROL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="tbl_Cagri" Relationship="DbisTakipModel.FK_tbl_Cagri_tbl_Personeler" FromRole="tbl_Personeler" ToRole="tbl_Cagri" />
+          <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK__tbl_Cagri__CAGRI__6383C8BA">
+          <End Role="tbl_Cagri" Type="Self.tbl_Cagri" Multiplicity="0..1" />
+          <End Role="tbl_CagriDetay" Type="Self.tbl_CagriDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Cagri">
+              <PropertyRef Name="ID_CAGRI" />
+            </Principal>
+            <Dependent Role="tbl_CagriDetay">
+              <PropertyRef Name="CAGRI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblCagri_tblFirmalar">
+          <End Role="tbl_Firmalar" Type="Self.tbl_Firmalar" Multiplicity="1" />
+          <End Role="tbl_Cagri" Type="Self.tbl_Cagri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Firmalar">
+              <PropertyRef Name="ID_FIRMA" />
+            </Principal>
+            <Dependent Role="tbl_Cagri">
+              <PropertyRef Name="FIRMA_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tbl_Personeler_tbl_Departmanlar">
           <End Role="tbl_Departmanlar" Type="Self.tbl_Departmanlar" Multiplicity="0..1" />
           <End Role="tbl_Personeler" Type="Self.tbl_Personeler" Multiplicity="*" />
@@ -292,13 +442,23 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbisTakipEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbisTakipEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_ADMIN" EntityType="Self.tbl_ADMIN" />
+          <EntitySet Name="tbl_Cagri" EntityType="Self.tbl_Cagri" />
+          <EntitySet Name="tbl_CagriDetay" EntityType="Self.tbl_CagriDetay" />
           <EntitySet Name="tbl_Departmanlar" EntityType="Self.tbl_Departmanlar" />
           <EntitySet Name="tbl_Firmalar" EntityType="Self.tbl_Firmalar" />
           <EntitySet Name="tbl_GorevDetaylar" EntityType="Self.tbl_GorevDetaylar" />
           <EntitySet Name="tbl_Gorevler" EntityType="Self.tbl_Gorevler" />
           <EntitySet Name="tbl_Personeler" EntityType="Self.tbl_Personeler" />
+          <AssociationSet Name="FK__tbl_Cagri__CAGRI__6383C8BA" Association="Self.FK__tbl_Cagri__CAGRI__6383C8BA">
+            <End Role="tbl_Cagri" EntitySet="tbl_Cagri" />
+            <End Role="tbl_CagriDetay" EntitySet="tbl_CagriDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblCagri_tblFirmalar" Association="Self.FK_tblCagri_tblFirmalar">
+            <End Role="tbl_Firmalar" EntitySet="tbl_Firmalar" />
+            <End Role="tbl_Cagri" EntitySet="tbl_Cagri" />
+          </AssociationSet>
           <AssociationSet Name="FK_tbl_Personeler_tbl_Departmanlar" Association="Self.FK_tbl_Personeler_tbl_Departmanlar">
             <End Role="tbl_Departmanlar" EntitySet="tbl_Departmanlar" />
             <End Role="tbl_Personeler" EntitySet="tbl_Personeler" />
@@ -315,33 +475,67 @@
             <End Role="tbl_Personeler" EntitySet="tbl_Personeler" />
             <End Role="tbl_Gorevler" EntitySet="tbl_Gorevler" />
           </AssociationSet>
-          <EntitySet Name="tbl_Cagri" EntityType="DbisTakipModel.tbl_Cagri" />
-          <AssociationSet Name="FK_tblCagri_tblFirmalar" Association="DbisTakipModel.FK_tblCagri_tblFirmalar">
+          <EntitySet Name="tbl_Mesajlar" EntityType="DbisTakipModel.tbl_Mesajlar" />
+          <AssociationSet Name="FK_tbl_Mesajlar_tbl_Firmalar" Association="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar">
             <End Role="tbl_Firmalar" EntitySet="tbl_Firmalar" />
+            <End Role="tbl_Mesajlar" EntitySet="tbl_Mesajlar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Mesajlar_tbl_Firmalar1" Association="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar1">
+            <End Role="tbl_Firmalar" EntitySet="tbl_Firmalar" />
+            <End Role="tbl_Mesajlar" EntitySet="tbl_Mesajlar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Cagri_tbl_Personeler" Association="DbisTakipModel.FK_tbl_Cagri_tbl_Personeler">
+            <End Role="tbl_Personeler" EntitySet="tbl_Personeler" />
             <End Role="tbl_Cagri" EntitySet="tbl_Cagri" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="tbl_Cagri">
+        <EntityType Name="tbl_Mesajlar">
           <Key>
-            <PropertyRef Name="ID_CAGRI" />
+            <PropertyRef Name="ID_MESAJ" />
           </Key>
-          <Property Name="ID_CAGRI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FIRMA_ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_MESAJ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GONDEREN" Type="Int32" Nullable="false" />
+          <Property Name="ALICI" Type="Int32" Nullable="false" />
           <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MESAJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tbl_Firmalar" Relationship="DbisTakipModel.FK_tblCagri_tblFirmalar" FromRole="tbl_Cagri" ToRole="tbl_Firmalar" />
-          <Property Name="CAGRI_DURUM" Type="Boolean" />
+          <Property Name="DURUM" Type="Boolean" />
+          <NavigationProperty Name="tbl_Firmalar" Relationship="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar" FromRole="tbl_Mesajlar" ToRole="tbl_Firmalar" />
+          <NavigationProperty Name="tbl_Firmalar1" Relationship="DbisTakipModel.FK_tbl_Mesajlar_tbl_Firmalar1" FromRole="tbl_Mesajlar" ToRole="tbl_Firmalar" />
         </EntityType>
-        <Association Name="FK_tblCagri_tblFirmalar">
+        <Association Name="FK_tbl_Mesajlar_tbl_Firmalar">
           <End Type="DbisTakipModel.tbl_Firmalar" Role="tbl_Firmalar" Multiplicity="1" />
-          <End Type="DbisTakipModel.tbl_Cagri" Role="tbl_Cagri" Multiplicity="*" />
+          <End Type="DbisTakipModel.tbl_Mesajlar" Role="tbl_Mesajlar" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tbl_Firmalar">
               <PropertyRef Name="ID_FIRMA" />
             </Principal>
+            <Dependent Role="tbl_Mesajlar">
+              <PropertyRef Name="GONDEREN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Mesajlar_tbl_Firmalar1">
+          <End Type="DbisTakipModel.tbl_Firmalar" Role="tbl_Firmalar" Multiplicity="1" />
+          <End Type="DbisTakipModel.tbl_Mesajlar" Role="tbl_Mesajlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Firmalar">
+              <PropertyRef Name="ID_FIRMA" />
+            </Principal>
+            <Dependent Role="tbl_Mesajlar">
+              <PropertyRef Name="ALICI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Cagri_tbl_Personeler">
+          <End Type="DbisTakipModel.tbl_Personeler" Role="tbl_Personeler" Multiplicity="0..1" />
+          <End Type="DbisTakipModel.tbl_Cagri" Role="tbl_Cagri" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Personeler">
+              <PropertyRef Name="ID_PERSONAl" />
+            </Principal>
             <Dependent Role="tbl_Cagri">
-              <PropertyRef Name="FIRMA_ID" />
+              <PropertyRef Name="PERSONEL_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -350,13 +544,37 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbisTakipModelStoreContainer" CdmEntityContainer="DbisTakipEntities">
+        <EntityContainerMapping StorageEntityContainer="DbisTakipModelStoreContainer" CdmEntityContainer="DbisTakipEntities1">
           <EntitySetMapping Name="tbl_ADMIN">
             <EntityTypeMapping TypeName="DbisTakipModel.tbl_ADMIN">
               <MappingFragment StoreEntitySet="tbl_ADMIN">
                 <ScalarProperty Name="ID_ADMIN" ColumnName="ID_ADMIN" />
                 <ScalarProperty Name="KULLANICI_ADI" ColumnName="KULLANICI_ADI" />
                 <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Cagri">
+            <EntityTypeMapping TypeName="DbisTakipModel.tbl_Cagri">
+              <MappingFragment StoreEntitySet="tbl_Cagri">
+                <ScalarProperty Name="PERSONEL_ID" ColumnName="PERSONEL_ID" />
+                <ScalarProperty Name="ID_CAGRI" ColumnName="ID_CAGRI" />
+                <ScalarProperty Name="FIRMA_ID" ColumnName="FIRMA_ID" />
+                <ScalarProperty Name="KONU" ColumnName="KONU" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="CAGRI_DURUM" ColumnName="CAGRI_DURUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CagriDetay">
+            <EntityTypeMapping TypeName="DbisTakipModel.tbl_CagriDetay">
+              <MappingFragment StoreEntitySet="tbl_CagriDetay">
+                <ScalarProperty Name="ID_CAGRI_DETAY" ColumnName="ID_CAGRI_DETAY" />
+                <ScalarProperty Name="CAGRI_ID" ColumnName="CAGRI_ID" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Saat" ColumnName="Saat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -371,6 +589,8 @@
           <EntitySetMapping Name="tbl_Firmalar">
             <EntityTypeMapping TypeName="DbisTakipModel.tbl_Firmalar">
               <MappingFragment StoreEntitySet="tbl_Firmalar">
+                <ScalarProperty Name="GORSEL" ColumnName="GORSEL" />
+                <ScalarProperty Name="FIRMA_SIFRE" ColumnName="FIRMA_SIFRE" />
                 <ScalarProperty Name="ID_FIRMA" ColumnName="ID_FIRMA" />
                 <ScalarProperty Name="FIRMA_ADI" ColumnName="FIRMA_ADI" />
                 <ScalarProperty Name="FIRMA_YETKILI" ColumnName="FIRMA_YETKILI" />
@@ -409,7 +629,8 @@
           <EntitySetMapping Name="tbl_Personeler">
             <EntityTypeMapping TypeName="DbisTakipModel.tbl_Personeler">
               <MappingFragment StoreEntitySet="tbl_Personeler">
-                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="ROL" ColumnName="ROL" />
                 <ScalarProperty Name="ID_PERSONAl" ColumnName="ID_PERSONAl" />
                 <ScalarProperty Name="PERSONEL_ADI" ColumnName="PERSONEL_ADI" />
                 <ScalarProperty Name="PERSONEL_SOYADI" ColumnName="PERSONEL_SOYADI" />
@@ -417,18 +638,20 @@
                 <ScalarProperty Name="PERSONEL_TELEFON" ColumnName="PERSONEL_TELEFON" />
                 <ScalarProperty Name="PERSONEL_GORSEL" ColumnName="PERSONEL_GORSEL" />
                 <ScalarProperty Name="DEPARTMAN" ColumnName="DEPARTMAN" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Cagri">
-            <EntityTypeMapping TypeName="DbisTakipModel.tbl_Cagri">
-              <MappingFragment StoreEntitySet="tbl_Cagri">
-                <ScalarProperty Name="CAGRI_DURUM" ColumnName="CAGRI_DURUM" />
+          <EntitySetMapping Name="tbl_Mesajlar">
+            <EntityTypeMapping TypeName="DbisTakipModel.tbl_Mesajlar">
+              <MappingFragment StoreEntitySet="tbl_Mesajlar">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
                 <ScalarProperty Name="KONU" ColumnName="KONU" />
-                <ScalarProperty Name="FIRMA_ID" ColumnName="FIRMA_ID" />
-                <ScalarProperty Name="ID_CAGRI" ColumnName="ID_CAGRI" />
+                <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+                <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+                <ScalarProperty Name="ID_MESAJ" ColumnName="ID_MESAJ" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

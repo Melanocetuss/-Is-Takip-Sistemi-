@@ -13,10 +13,10 @@ namespace IsTakipSistemi.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbisTakipEntities : DbContext
+    public partial class DbisTakipEntities1 : DbContext
     {
-        public DbisTakipEntities()
-            : base("name=DbisTakipEntities")
+        public DbisTakipEntities1()
+            : base("name=DbisTakipEntities1")
         {
         }
     
@@ -26,11 +26,13 @@ namespace IsTakipSistemi.Entity
         }
     
         public virtual DbSet<tbl_ADMIN> tbl_ADMIN { get; set; }
+        public virtual DbSet<tbl_Cagri> tbl_Cagri { get; set; }
+        public virtual DbSet<tbl_CagriDetay> tbl_CagriDetay { get; set; }
         public virtual DbSet<tbl_Departmanlar> tbl_Departmanlar { get; set; }
         public virtual DbSet<tbl_Firmalar> tbl_Firmalar { get; set; }
         public virtual DbSet<tbl_GorevDetaylar> tbl_GorevDetaylar { get; set; }
         public virtual DbSet<tbl_Gorevler> tbl_Gorevler { get; set; }
         public virtual DbSet<tbl_Personeler> tbl_Personeler { get; set; }
-        public virtual DbSet<tbl_Cagri> tbl_Cagri { get; set; }
+        public virtual DbSet<tbl_Mesajlar> tbl_Mesajlar { get; set; }
     }
 }

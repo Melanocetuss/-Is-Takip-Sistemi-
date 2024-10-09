@@ -90,7 +90,7 @@
             this.cbxGorevAlan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxGorevAlan.Properties.NullText = "Görev Alan Personel";
-            this.cbxGorevAlan.Size = new System.Drawing.Size(271, 22);
+            this.cbxGorevAlan.Size = new System.Drawing.Size(436, 22);
             this.cbxGorevAlan.TabIndex = 6;
             // 
             // labelControl2
@@ -119,7 +119,7 @@
             this.txtAciklama.Location = new System.Drawing.Point(156, 268);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.NullText = ".............. Açıklama ..............";
-            this.txtAciklama.Size = new System.Drawing.Size(439, 162);
+            this.txtAciklama.Size = new System.Drawing.Size(439, 231);
             this.txtAciklama.TabIndex = 2;
             // 
             // labelControl3
@@ -158,7 +158,7 @@
             this.txtTarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtTarih.Properties.MaskSettings.Set("mask", "");
             this.txtTarih.Properties.NullText = "Tarih Seçiniz";
-            this.txtTarih.Size = new System.Drawing.Size(271, 22);
+            this.txtTarih.Size = new System.Drawing.Size(436, 22);
             this.txtTarih.TabIndex = 9;
             // 
             // labelControl4
@@ -229,12 +229,12 @@
             // 
             this.txtGorevVeren.Location = new System.Drawing.Point(156, 23);
             this.txtGorevVeren.Name = "txtGorevVeren";
-            this.txtGorevVeren.Size = new System.Drawing.Size(271, 22);
+            this.txtGorevVeren.Size = new System.Drawing.Size(436, 22);
             this.txtGorevVeren.TabIndex = 17;
             // 
             // checkAktifGorev
             // 
-            this.checkAktifGorev.Location = new System.Drawing.Point(335, 198);
+            this.checkAktifGorev.Location = new System.Drawing.Point(156, 198);
             this.checkAktifGorev.Name = "checkAktifGorev";
             this.checkAktifGorev.Properties.AutoHeight = false;
             this.checkAktifGorev.Properties.Caption = "Aktif Görev";

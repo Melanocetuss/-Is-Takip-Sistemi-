@@ -13,7 +13,7 @@ namespace IsTakipSistemi.Formlar
 {
     public partial class frmGorevDetay : Form
     {
-        private Entity.DbisTakipEntities db = new Entity.DbisTakipEntities();
+        private Entity.DbisTakipEntities1 db = new Entity.DbisTakipEntities1();
         public frmGorevDetay()
         {
             InitializeComponent();

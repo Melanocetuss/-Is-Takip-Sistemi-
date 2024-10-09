@@ -14,7 +14,7 @@ namespace IsTakipSistemi.Formlar
 {
     public partial class frmAnasayfa : Form
     {
-        Entity.DbisTakipEntities db = new Entity.DbisTakipEntities();
+        Entity.DbisTakipEntities1 db = new Entity.DbisTakipEntities1();
         public frmAnasayfa()
         {
             InitializeComponent();

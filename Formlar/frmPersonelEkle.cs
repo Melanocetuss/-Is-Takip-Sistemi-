@@ -19,7 +19,7 @@ namespace IsTakipSistemi.Formlar
             InitializeComponent();
         }
 
-        private Entity.DbisTakipEntities db = new Entity.DbisTakipEntities();
+        private Entity.DbisTakipEntities1 db = new Entity.DbisTakipEntities1();
         private void btnPerEkle_Click(object sender, EventArgs e)
         {
             tbl_Personeler t = new tbl_Personeler();
