@@ -7,6 +7,6 @@ Bu proje, C# programlama dili ve DevExpress bileşenleri kullanılarak geliştir
 - DevExpress: Kullanıcı arayüzü tasarımı ve zengin kontroller için kullanıldı.
 - Entity Framework: Veritabanı işlemleri ve ORM (Object-Relational Mapping) için kullanıldı.
 
-![resim](readmeImage/Screenshot2025-02-01165106.png)
+![resim](readmeImage/Screenshot_2025-02-01_165106.png)
 ![resim](readmeImage/Screenshot 2025-02-01 165617.png)
 ![resim](readmeImage/Screenshot 2025-02-01 165617.png)
